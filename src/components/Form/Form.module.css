@@ -1,0 +1,17 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgb(23, 145, 145);
+  color: #ffffff;
+}
