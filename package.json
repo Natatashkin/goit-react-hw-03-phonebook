@@ -2,7 +2,7 @@
   "name": "my-react-webpack",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://natatashkin.github.io/goit-react-hw-02-phonebook",
+  "homepage": "http://natatashkin.github.io/goit-react-hw-03-phonebook",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
