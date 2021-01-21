@@ -97,9 +97,13 @@ export default class App extends Component {
     return (
       <div className="container">
         {showModal && (
-          <Modal>
+          <Modal onClose={this.toggleModal}>
             {textModal}
-            <button type="button" className={s.modalButton}>
+            <button
+              type="button"
+              className={s.modalButton}
+              onClick={this.toggleModal}
+            >
               Ок!
             </button>
           </Modal>
