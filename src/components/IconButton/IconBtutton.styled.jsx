@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const IconButtonStyle = styled.button`
   margin-left: ${({ theme: { spacing } }) => spacing(1)};
   border: none;
+  border-radius: ${({ theme: { options } }) => options.borderRadius};
   outline: none;
   padding: ${({ theme }) => theme.spacing(1)};
   background-color: ${({ background, theme: { colors } }) =>

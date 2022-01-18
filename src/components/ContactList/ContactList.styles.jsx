@@ -15,8 +15,6 @@ const Item = styled.li`
 
   &:hover {
     background-color: ${({ theme: { colors } }) => colors.lightblue};
-    /* opacity: 0.3; */
-    /* color: ${({ theme: { colors } }) => colors.white}; */
   }
 `;
 

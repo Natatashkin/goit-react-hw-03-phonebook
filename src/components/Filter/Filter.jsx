@@ -6,6 +6,16 @@ import { FaTimes } from 'react-icons/fa';
 const FilterWrapper = styled.div`
   display: flex;
   align-items: center;
+  padding-top: ${({ theme: { spacing } }) => spacing(1)};
+  padding-bottom: ${({ theme: { spacing } }) => spacing(1)};
+`;
+
+const Input = styled.input`
+  padding: ${({ theme: { spacing } }) => spacing(1)};
+  &:focus,
+  &:hover {
+    outline-color: ${({ theme: { colors } }) => colors.blue};
+  }
 `;
 
 const Filter = ({ value, onChange, onClick }) => {
@@ -13,7 +23,7 @@ const Filter = ({ value, onChange, onClick }) => {
     <>
       <label htmlFor="filter">Find contact by name:</label>
       <FilterWrapper>
-        <input type="text" name="filter" value={value} onChange={onChange} />
+        <Input type="text" name="filter" value={value} onChange={onChange} />
         {value && (
           <IconButton
             color="blue"

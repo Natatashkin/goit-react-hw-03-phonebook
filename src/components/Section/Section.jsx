@@ -7,10 +7,15 @@ const SectionStyle = styled.section`
   margin-right: auto;
 `;
 
+const Title = styled.h2`
+  margin-top: ${({ theme: { spacing } }) => spacing(3)};
+  margin-bottom: ${({ theme: { spacing } }) => spacing(3)};
+`;
+
 const Section = ({ title, children }) => {
   return (
     <SectionStyle>
-      <h2>{title}</h2>
+      <Title>{title}</Title>
       {children}
     </SectionStyle>
   );
