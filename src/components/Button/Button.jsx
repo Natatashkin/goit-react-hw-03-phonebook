@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FormButton from './Button.styled';
 
 const Button = ({
   type,
@@ -8,10 +9,10 @@ const Button = ({
   children = null,
 }) => {
   return (
-    <button type={type} onClick={onClick}>
+    <FormButton type={type} onClick={onClick}>
       {title}
       {children}
-    </button>
+    </FormButton>
   );
 };
 

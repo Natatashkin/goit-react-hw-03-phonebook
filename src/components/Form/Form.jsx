@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { FormField, Input, Label, ErrorMessageStyle } from './Form.styled';
 import Button from '../Button';
 
 const nameRegEx = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
@@ -35,17 +36,23 @@ export default class AppForm extends Component {
           onSubmit={this.handleSubmit}
         >
           <Form>
-            <div className="FormField">
-              <label htmlFor="name">Contact Name</label>
-              <Field name="name" type="text" />
-              <ErrorMessage name="name" />
-            </div>
+            <FormField>
+              <Label htmlFor="name">Contact Name</Label>
+              <Input name="name" type="text" placeholder=" " />
+              <ErrorMessage
+                name="name"
+                render={msg => <ErrorMessageStyle>{msg}</ErrorMessageStyle>}
+              />
+            </FormField>
 
-            <div className="FormField">
-              <label htmlFor="number">Contact Number</label>
-              <Field name="number" type="tel" />
-              <ErrorMessage name="number" />
-            </div>
+            <FormField>
+              <Label htmlFor="number">Contact Number</Label>
+              <Input name="number" type="tel" placeholder=" " />
+              <ErrorMessage
+                name="number"
+                render={msg => <ErrorMessageStyle>{msg}</ErrorMessageStyle>}
+              />
+            </FormField>
 
             <Button type={'submit'} title={'Add Contact'} />
           </Form>

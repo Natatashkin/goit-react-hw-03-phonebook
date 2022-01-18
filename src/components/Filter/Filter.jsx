@@ -1,5 +1,6 @@
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import IconButton from '../IconButton';
+import { FaTimes } from 'react-icons/fa';
 
 const Filter = ({ value, onChange, onClick }) => {
   return (
@@ -7,9 +8,14 @@ const Filter = ({ value, onChange, onClick }) => {
       <label htmlFor="filter">Find contact by name:</label>
       <div>
         <input type="text" name="filter" value={value} onChange={onChange} />
-        <button type="button" aria-label="Clear filter" onClick={onClick}>
-          x
-        </button>
+        <IconButton
+          color="blue"
+          type="button"
+          aria-label="Clear filter"
+          onClick={onClick}
+        >
+          <FaTimes />
+        </IconButton>
       </div>
     </div>
   );

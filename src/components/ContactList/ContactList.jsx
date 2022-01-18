@@ -1,4 +1,6 @@
 import React from 'react';
+import IconButton from '../IconButton';
+import { FaTrashAlt } from 'react-icons/fa';
 
 const ContactList = ({ contacts, onClick }) => {
   return (
@@ -9,9 +11,14 @@ const ContactList = ({ contacts, onClick }) => {
           <li key={id}>
             <span>{name}</span>
             <span>{number}</span>
-            <button type="button" onClick={() => onClick(id)}>
-              x
-            </button>
+            <IconButton
+              type="button"
+              background="blue"
+              aria-label="Button to delete contact"
+              onClick={() => onClick(id)}
+            >
+              <FaTrashAlt />
+            </IconButton>
           </li>
         );
       })}
