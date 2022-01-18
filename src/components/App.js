@@ -96,7 +96,7 @@ export default class App extends Component {
       this.setState(prevState => ({
         contacts: prevState.contacts.filter(contact => contact.id !== itemId),
       })),
-    ).then(toast.success(`contact ${item.name} was delete!`));
+    ).then(toast.success(`Contact ${item.name} was deleted!`));
   };
 
   resetFilter = () => {
