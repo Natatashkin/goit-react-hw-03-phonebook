@@ -1,16 +1,17 @@
 import React from 'react';
 import IconButton from '../IconButton';
 import { FaTrashAlt } from 'react-icons/fa';
+import { List, Item, Name, Number } from './ContactList.styles';
 
 const ContactList = ({ contacts, onClick }) => {
   return (
-    <ul>
+    <List>
       {contacts.map(contact => {
         const { id, name, number } = contact;
         return (
-          <li key={id}>
-            <span>{name}</span>
-            <span>{number}</span>
+          <Item key={id}>
+            <Name>{name}</Name>
+            <Number>{number}</Number>
             <IconButton
               type="button"
               background="blue"
@@ -19,10 +20,10 @@ const ContactList = ({ contacts, onClick }) => {
             >
               <FaTrashAlt />
             </IconButton>
-          </li>
+          </Item>
         );
       })}
-    </ul>
+    </List>
   );
 };
 

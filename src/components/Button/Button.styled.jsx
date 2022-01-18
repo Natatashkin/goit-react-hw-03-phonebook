@@ -15,10 +15,12 @@ const FormButton = styled.button`
     color: ${({ theme: { colors } }) => colors.wihite};
     outline-color: 1px solid ${({ theme: { colors } }) => colors.blue};
   }
-
+ */
   &:active {
+    background-color: ${({ theme: { colors } }) => colors.ligthgrey};
+    outline-color: 1px solid ${({ theme: { colors } }) => colors.blue};
     box-shadow: ${({ theme: { options } }) => options.shadow};
-  } */
+  }
 `;
 
 export default FormButton;
